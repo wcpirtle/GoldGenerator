@@ -1,0 +1,332 @@
+/**
+ * CivClicker
+ * Copyright (C) 2014 David Holley <dhmholley@gmail.com>
+
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program (if you are reading this on the original
+ * author's website, you can find a copy at
+ * <http://dhmholley.co.uk/gpl.txt>). If not, see
+ * <http://www.gnu.org/licenses/>.
+ *
+ * This file modified by William Pirtle
+ * wpirtle2@student.gsu.edu
+ * CSC 4821 at Georgia State University
+ *
+ * This file was modified to the specifications needed for my semester project
+ * Gold Generator.
+ * It includes changes to CSS tags and classes, as well as styling changes to
+ * fit the design goals of my project.
+ */
+body{
+	font-family: sans-serif;
+	font-size: 1em;
+	background-image:url('../images/goldGeneratorBG.png');
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	background-size:100% 100%;
+	text-shadow:none;
+}
+#strip{
+	text-shadow:none;
+}
+
+.icon-lg{
+	height:42px;
+	width:42px;
+}
+.icon-sm{
+	height:16px;
+	width:16px;
+	margin: 2px 0 -2px 0;
+}
+
+#header{
+	position:relative;
+}
+
+#header a {
+	float: right;
+}
+
+h1{
+	float:left;
+	bottom:0;
+}
+#player{
+	position:absolute;
+	float:left;
+	padding-left:1em;
+	bottom:0;
+}
+
+.net{
+	padding-left:1em;
+}
+
+h3{
+	clear:both;
+}
+button{
+	width:190px;
+	border:2px solid black;
+	background-color:#fff;
+	margin-right:10px;
+	padding:0.1em;
+	font-size:1.0em;
+	font-weight:500;
+}
+button:hover{
+	background-color:#eee;
+}
+button:disabled{
+	color:#ccc;
+	font-weight:normal;
+}
+#jobs button{
+	width:48px;
+	text-shadow:none;
+	font-weight:normal;
+	font-size:0.9em;
+	margin-right:5px;
+}
+
+.paneSelector{
+	width:15%;
+	float:left;
+	text-align:center;
+	margin:1em 0;
+	line-height:2em;
+	border:2px solid black;
+	background-color:#fff;
+}
+.paneSelector:hover{
+	text-decoration:underline;
+	text-shadow: none;
+	cursor:pointer;
+}
+.selected{
+	border-bottom:none;
+	background:none;
+	color:white;
+	text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+}
+.selected:hover{
+	text-decoration:none;
+	cursor:auto;
+	background:none;
+	text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+}
+
+#upgradesPane{
+	display:none;
+}
+.job{
+	width:120px;
+}
+.note{
+	text-align:right;
+	font-style:italic;
+	color:#555;
+	padding-left:1em;
+}
+.cost{
+	white-space:nowrap;
+	text-align:right;
+	font-style:italic;
+	color:#555;
+	padding-left:1em;
+	margin-right:-1em;
+}
+#jobs .note{
+	width:300px;
+}
+.number{
+	text-align:right;
+	padding-right:5px;
+}
+.icon{
+	padding-right:10px;
+}
+#materials{
+	float:left;
+	width:50%;
+}
+#employees{
+	float:left;
+	width:50%;
+}
+
+
+#minergroup{
+	display:none;
+}
+#refinergroup{
+	display:none;
+}
+#mintergroup{
+	display:none;
+}
+#marketergroup{
+	display:none;
+}
+
+.buildingnames{
+	padding-left:5px;
+}
+#buildings button{
+	margin-right:3px;
+}
+
+#logTable td{
+    padding-right:20px;
+}
+
+#stats{
+	width:50%;
+	float:left;
+}
+
+#settings{
+	width:50%;
+	float:left;
+}
+
+#basicMaterials{
+	margin-left:0.5em;
+}
+#basicMaterials button{
+	padding:0.3em;
+}
+
+#purchased{
+	margin-left:1em;
+}
+#purchased *{
+	line-height:1.5em;
+}
+
+#PminerUpgrade1{
+	display:none;
+}
+#PminerUpgrade2{
+	display:none;
+}
+#PminerUpgrade3{
+	display:none;
+}
+#PrefinerUpgrade1{
+	display:none;
+}
+#PrefinerUpgrade2{
+	display:none;
+}
+#PrefinerUpgrade3{
+	display:none;
+}
+#PminterUpgrade1{
+	display:none;
+}
+#PminterUpgrade2{
+	display:none;
+}
+#PminterUpgrade3{
+	display:none;
+}
+#PmarketerUpgrade1{
+	display:none;
+}
+#PmarketerUpgrade2{
+	display:none;
+}
+#PmarketerUpgrade3{
+	display:none;
+}
+#PmanualUpgrade1{
+	display:none;
+}
+#PmanualUpgrade2{
+	display:none;
+}
+
+.achievement{
+	display:block;
+	float:left;
+	width:100px;
+	height:60px;
+	border:2px solid black;
+	background-color:#aaa;
+	background-image:url('../images/achLocked.png');
+}
+
+.achUnlocked{
+	box-sizing:border-box;
+	-moz-box-sizing:border-box; /* Firefox needs a nonstandard name */
+	width:100%;
+	height:100%;
+	padding:0.2em;
+	font-size:0.9em;
+	text-shadow:none;
+	font-weight:normal;
+	background-color:#fff;
+}
+#achTenClicks{
+	display:none;
+}
+#achHundredClicks{
+	display:none;
+}
+#achThousandClicks{
+	display:none;
+}
+#achTenThousandClicks{
+	display:none;
+}
+#achTenQuarries{
+	display:none;
+}
+#achHundredQuarries{
+	display:none;
+}
+#achTenRefineries{
+	display:none;
+}
+#achHundredRefineries{
+	display:none;
+}
+#achTenMints{
+	display:none;
+}
+#achHundredMints{
+	display:none;
+}
+#achTenSkyscrapers{
+	display:none;
+}
+#achHundredSkyscrapers{
+	display:none;
+}
+#achTenEmployees{
+	display:none;
+}
+#achHundredEmployees{
+	display:none;
+}
+#achThousandEmployees{
+	display:none;
+}
+#achSevenUpgrades{
+	display:none;
+}
+#achFourteenUpgrades{
+	display:none;
+}
